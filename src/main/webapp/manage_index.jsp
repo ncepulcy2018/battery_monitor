@@ -51,6 +51,12 @@
 					</div>
 					<div onmouseover="this.className='information02'" onmouseout="this.className='information01'" class="information01" title="帮助" onclick="help()"></div>
 				</div>
+				<div class="mini_nav_fl">
+					<div id="mailAlert" onmouseover="this.className='alert02'" onmouseout="this.className='alert01'" class="alert01" title="发送邮件" onclick="sendEmail()">
+						<a href="/sendEmail.action">邮件发送</a>
+					</div>
+					<div onmouseover="this.className='information02'" onmouseout="this.className='information01'" class="information01" title="帮助" onclick="help()"></div>
+				</div>
 				<div class="jump_button">
 					<div class="button">
 						<span class="user_name">${sessionScope['org.springframework.web.servlet.support.SessionFlashMapManager.FLASH_MAPS'][0]['user']}</span><br/>
@@ -61,6 +67,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 		
