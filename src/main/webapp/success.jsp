@@ -55,11 +55,6 @@
                         saveAsImage : {show: true}
                     }
                 },
-                dataZoom : {
-                    show : true,
-                    start : 0,
-                    end : 10
-                },
                 xAxis : [
                     {
                         type : 'category',
