@@ -1,21 +1,11 @@
-package com.ncepulcy.battery_monitor.util;
-import java.util.Date;
-import java.util.Properties;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
+import java.util.*;
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.*;
+import javax.activation.*;
 
-import com.sun.mail.util.MailSSLSocketFactory;
-
-public class EmailUtil {
-
-    public  static void sendEmail()
+public class MailTest
+{
+    public static void main(String [] args)
     {
         // 收件人电子邮箱
         String to = "ncepulcy@126.com";
@@ -24,6 +14,7 @@ public class EmailUtil {
         String from = "cculiuchongyang@163.com";
 
         // 指定发送邮件的主机为 localhost
+        String host = "localhost";
 
         // 获取系统属性
         Properties props = new Properties();
@@ -41,7 +32,7 @@ public class EmailUtil {
 //        Session session = Session.getDefaultInstance(properties);
 
         try{
-            // 创建默认的 MimeMessage 对象。
+            // 创建默认的 MimeMessage 对象
             MimeMessage message = new MimeMessage(session);
 
             // Set From: 头部头字段
@@ -51,35 +42,14 @@ public class EmailUtil {
             message.addRecipient(Message.RecipientType.TO,
                     new InternetAddress(to));
 
-            // Set Subject: 头字段
+            // Set Subject: 头部头字段
             message.setSubject("This is the Subject Line!");
 
-            // 创建消息部分
-            BodyPart messageBodyPart = new MimeBodyPart();
+            // 设置消息体
+            message.setText("This is actual message");
 
-            // 消息
-            messageBodyPart.setText("This is message body");
-
-            // 创建多重消息
-            Multipart multipart = new MimeMultipart();
-
-            // 设置文本消息部分
-            multipart.addBodyPart(messageBodyPart);
-
-            // 附件部分
-            messageBodyPart = new MimeBodyPart();
-            String filename = "/user.xls";
-            DataSource source = new FileDataSource(filename);
-            messageBodyPart.setDataHandler(new DataHandler(source));
-            messageBodyPart.setFileName(filename);
-            multipart.addBodyPart(messageBodyPart);
-
-            // 发送完整消息
-            message.setContent(multipart );
-
-            //   发送消息
+            // 发送消息
             Transport.send(message);
-//            System.out.println("Sent message successfully....");
             System.out.println("Sent message successfully....");
         }catch (MessagingException mex) {
             mex.printStackTrace();

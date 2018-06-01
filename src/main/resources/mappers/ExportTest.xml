@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ncepulcy.battery_monitor.dao.ExportDao">
+    <select id="findAll" parameterType="map" resultType="BatterySingleTest">
+        SELECT b.groupID,b.batteryID,b.startU,b.endU,b.serialNumber FROM battery_test_single b
+    </select>
+    <select id="findByGroupID" parameterType="map" resultType="BatterySingleTest">
+        SELECT b.groupID,b.batteryID,b.startU,b.endU,b.serialNumber FROM battery_test_single b WHERE groupID=#{groupID}
+    </select>
+</mapper>

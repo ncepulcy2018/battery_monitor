@@ -23,6 +23,6 @@ public class SendEmailAction {
     public String sendEmail(){
 
         EmailUtil.sendEmail();
-        return "OK";
+        return null;
     }
 }
