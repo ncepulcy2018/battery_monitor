@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/styles/rum.css"/>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/data/jquery.dataTables.css"/>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/echarts/css/echarts.css"/>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/jquery/jquery-1.10.2.min.js.bak"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/commons.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/data/jquery.dataTables.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/menu.js"></script>
@@ -36,7 +36,7 @@
 	<div class="bodyq">
 		<div class="header">
 			<div class="logo">
-				<a href="" target="_blank"><img src="/static/images/timg.jpg" height="30" align="middle" style="margin-left: 10px"></a>
+				<a href="" target="_blank"><img src="${pageContext.request.contextPath}/static/images/timg.jpg" height="30" align="middle" style="margin-left: 10px"></a>
 			</div>
 			<%--菜单显示内容   根据js动态加载--%>
 			<div class="mainmenu">
@@ -84,7 +84,7 @@
 			</div>
 			
 			<div id="conright" class="conright">
-				<div id="main" class="main" style="width:1000px;height:525px;margin:0 auto;"></div>
+				<div id="main" class="main" style="width:1000px;height:600px;margin:0 auto;"></div><%----%>
 			</div>
 		</div>
 	</div>

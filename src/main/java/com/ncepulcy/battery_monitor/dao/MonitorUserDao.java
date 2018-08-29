@@ -8,5 +8,5 @@ import java.util.List;
 public interface MonitorUserDao {
     public void addUser(MonitorUser monitorUser);
 
-    public List<MonitorUser> findUserByNameAndPwd(@Param("userName")String userName, @Param("password")String password);
+    public List<MonitorUser> findUserByNameAndPwd(@Param("userName") String userName, @Param("password") String password);
 }

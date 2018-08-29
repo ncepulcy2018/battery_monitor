@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/echarts/css/echarts.css"/>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/static/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/jquery/jquery-1.10.2.min.js.bak"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/echarts/dist/echarts.js"></script>
 </head>
 <body>
